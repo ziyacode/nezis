@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziya & Nəzrin — Əbədi Sevgi Nağılı 💖</title>
+    
+    <!-- Meta Teqlər -->
+    <meta name="description" content="Ziya və Nəzrin üçün hazırlanmış xüsusi romantik sevgi dünyası.">
+    <meta name="theme-color" content="#1a0936">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+
+    <!-- CSS Faylları -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         ŞİFRƏ EKRANI (LOCK SCREEN - KOD: 3107)
+         ========================================== -->
+    <div id="lock-screen" class="lock-screen">
+        <div id="lock-card" class="lock-card">
+            <div class="lock-avatar-rings">
+                <div class="lock-avatar-glow"></div>
+                <div class="lock-avatar-inner">🔐</div>
+            </div>
+
+            <h1 class="lock-title">Ziya & Nəzrin</h1>
+            <p class="lock-subtitle">Bizim xüsusi dünyamıza daxil olmaq üçün sevgi şifrəsini yazın</p>
+
+            <!-- 4 rəqəmli PIN göstəricisi -->
+            <div class="pin-display">
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-dot"></div>
+            </div>
+
+            <!-- Toxunuşlu Rəqəm Klaviaturası -->
+            <div class="keypad">
+                <button class="key-btn" data-key="1">1</button>
+                <button class="key-btn" data-key="2">2</button>
+                <button class="key-btn" data-key="3">3</button>
+                <button class="key-btn" data-key="4">4</button>
+                <button class="key-btn" data-key="5">5</button>
+                <button class="key-btn" data-key="6">6</button>
+                <button class="key-btn" data-key="7">7</button>
+                <button class="key-btn" data-key="8">8</button>
+                <button class="key-btn" data-key="9">9</button>
+                <button class="key-btn action-btn" style="pointer-events: none;">💖</button>
+                <button class="key-btn" data-key="0">0</button>
+                <button class="key-btn backspace" data-action="backspace">⌫</button>
+            </div>
+
+            <button id="hint-btn" class="lock-hint-btn" type="button">İpucu lazımdır?</button>
+            <div id="hint-text" class="lock-hint-text"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         ƏSAS SAYT (KİLİD AÇILDIQDAN SONRA)
+         ========================================== -->
+    <div id="main-site">
+
+        <!-- Sabit Naviqasiya -->
+        <header class="top-nav">
+            <nav class="nav-glass">
+                <a href="#" class="nav-brand">
+                    <span>❤️</span> Ziya & Nəzrin
+                </a>
+                <div class="nav-actions">
+                    <a href="#music-section" class="nav-btn" style="text-decoration: none;" title="Bizim Xüsusi Mahnımız">
+                        🎵 Bizim Mahnı
+                    </a>
+                    <button id="sound-toggle" class="nav-btn" title="Romantik Fon Musiqisi">
+                        <div class="audio-bars">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="sound-status">Fon Melodiyası</span>
+                    </button>
+                    <div class="nav-btn" style="cursor: default;" title="02.08.2026-dan bəri birlikdə">
+                        ⏳ <span id="nav-together-days">Hesablanır...</span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HERO BÖLMƏSİ -->
+        <section class="hero-section">
+            <div class="hero-tagline">
+                ✨ Bizim Əbədi Sevgi Nağılımız ✨
+            </div>
+
+            <!-- Cütlük Avatarları və Mərkəzi Döyünən Ürək -->
+            <div class="couple-avatars-wrapper">
+                <!-- Ziya -->
+                <div class="avatar-card">
+                    <div class="avatar-ring">
+                        <div class="avatar-img-box">
+                            🤴🏻
+                        </div>
+                    </div>
+                    <div class="avatar-name">Ziya Niyazoğlu</div>
+                    <div class="avatar-role">Qəlbin Sahibi 💫</div>
+                </div>
+
+                <!-- Mərkəzi Nəbz Kimi Döyünən Ürək Düyməsi -->
+                <div class="avatar-connector">
+                    <div class="pulse-circle"></div>
+                    <button id="center-heart-btn" class="center-heart-btn" title="Sevgi Göndər!">
+                        ❤️
+                    </button>
+                </div>
+
+                <!-- Nəzrin -->
+                <div class="avatar-card">
+                    <div class="avatar-ring girl">
+                        <div class="avatar-img-box">
+                            👸🏻
+                        </div>
+                    </div>
+                    <div class="avatar-name">Nəzrin Əlizadə</div>
+                    <div class="avatar-role">Ürəyin Kraliçası 🌸</div>
+                </div>
+            </div>
+
+            <h2 class="hero-title">Səninlə Hər An Möcüzədir</h2>
+            <p class="hero-subtitle">
+                Həyatımın ən parlaq günəşi, ruhumun ən dərin nəğməsi... Bu sayt bizim bitməyən və hər keçən saniyə daha da böyüyən sevgimizə həsr olunub.
+            </p>
+
+            <!-- CANLI SEVGİ SAYĞACI -->
+            <div class="love-counter-wrapper">
+                <div class="counter-header">
+                    <span>✨</span> Birlikdə Keçirdiyimiz Hər Şirin Saniyə <span>✨</span>
+                </div>
+                <div class="counter-grid">
+                    <div class="counter-box">
+                        <div id="count-days" class="counter-num">00</div>
+                        <div class="counter-label">Gün</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="count-hours" class="counter-num">00</div>
+                        <div class="counter-label">Saat</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="count-minutes" class="counter-num">00</div>
+                        <div class="counter-label">Dəqiqə</div>
+                    </div>
+                    <div class="counter-box">
+                        <div id="count-seconds" class="counter-num">00</div>
+                        <div class="counter-label">Saniyə</div>
+                    </div>
+                </div>
+                <div class="counter-footer">
+                    📅 02 Avqust 2026-cı ildən bu günə qədər və sonsuzluğa doğru...
+                </div>
+            </div>
+        </section>
+
+        <!-- DAYANMAYAN SÖZLƏR XƏTTİ (MARQUEE) -->
+        <div class="love-ticker-wrap">
+            <div class="love-ticker">
+                <div class="ticker-item">💖 Ziya & Nəzrin</div>
+                <div class="ticker-item">✨ 02.08.2026 Tanış Olduq</div>
+                <div class="ticker-item">💬 26.08.2026 WP-yə Keçdik</div>
+                <div class="ticker-item">🙈 İlk Görüldü Atıldı Amma Sevgi Qazandı!</div>
+                <div class="ticker-item">🌹 Nəzrinim Dünyanın Ən Gözəl Xanımıdır</div>
+                <div class="ticker-item">🔐 Şifrəmiz: 3107 — Əbədiyyət</div>
+                <div class="ticker-item">💖 Ziya & Nəzrin</div>
+                <div class="ticker-item">✨ 02.08.2026 Tanış Olduq</div>
+                <div class="ticker-item">💬 26.08.2026 WP-yə Keçdik</div>
+                <div class="ticker-item">🙈 İlk Görüldü Atıldı Amma Sevgi Qazandı!</div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             XÜSUSİ MAHNIMIZ (REI — AH CANIM SEVGİLİM)
+             ========================================== -->
+        <section id="music-section" class="music-player-section">
+            <div class="section-title-wrap">
+                <h3 class="section-title">Bizim Xüsusi Mahnımız 🎵</h3>
+                <p class="section-subtitle">Rei — Ah Canım Sevgilim (Ziyadan Nəzrinə Əbədi Eşqlə Həsr Olunub)</p>
+            </div>
+
+            <div class="music-player-card">
+                
+                <!-- 7 Mahnılıq Pleylist Seçimi (Playlist Tabs) -->
+                <div class="playlist-header-wrap">
+                    <div class="playlist-heading">
+                        <span>✨</span> Bizim Xüsusi Pleylistimiz (7 Mahnı) <span>✨</span>
+                    </div>
+                    <div id="player-playlist-tabs" class="playlist-tabs-container">
+                        <!-- JS tərəfindən 7 mahnı üçün doldurulur -->
+                    </div>
+                </div>
+
+                <div class="music-player-layout">
+                    
+                    <!-- Sol Tərəf: Vinil Lövhə və Pleyer İdarəsi -->
+                    <div class="player-deck">
+                        
+                        <!-- 3D Fırlanan Vinil & Tonearm -->
+                        <div class="turntable-wrapper">
+                            <div class="turntable-platter"></div>
+                            <div id="turntable-vinyl" class="turntable-vinyl">
+                                <div class="vinyl-center-label">
+                                    <div id="vinyl-label-title" class="vinyl-label-title">Ah Canım Sevgilim</div>
+                                    <div id="vinyl-label-sub" class="vinyl-label-sub">Rei</div>
+                                </div>
+                            </div>
+                            <div id="turntable-tonearm" class="turntable-tonearm">
+                                <div class="tonearm-base"></div>
+                                <div class="tonearm-rod"></div>
+                                <div class="tonearm-head"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mahnı Məlumatı -->
+                        <div class="player-meta">
+                            <h4 id="player-song-title" class="player-song-title">Ah Canım Sevgilim</h4>
+                            <div class="player-artist-row">
+                                <span id="player-artist-name" class="player-artist-name">Rei</span>
+                                <span class="meta-dot">•</span>
+                                <span id="player-song-badge" class="player-song-badge">HQ Audio 🌸</span>
+                            </div>
+                            <div id="player-dedication" class="player-dedication">
+                                "Sən mənim ömrümün ən gözəl nəğməsisən..."
+                            </div>
+                        </div>
+
+                        <!-- Canlı Səs Dalğaları (Equalizer) -->
+                        <div id="player-soundwave" class="player-soundwave">
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                            <div class="soundwave-bar"></div>
+                        </div>
+
+                        <!-- Zolaq (Progress Bar) -->
+                        <div class="player-progress-container">
+                            <div id="player-progress-bar" class="player-progress-bar">
+                                <div id="player-progress-fill" class="player-progress-fill">
+                                    <div id="player-progress-handle" class="player-progress-handle"></div>
+                                </div>
+                            </div>
+                            <div class="player-time-row">
+                                <span id="player-current-time">00:00</span>
+                                <span id="player-total-time">03:10</span>
+                            </div>
+                        </div>
+
+                        <!-- Əsas İdarəetmə Düymələri (Prev, Geri 10s, Play, İrəli 10s, Next, Loop) -->
+                        <div class="player-controls-row">
+                            <!-- Əvvəlki Mahnı -->
+                            <button id="player-prev-btn" class="player-ctrl-btn" title="Əvvəlki mahnı">
+                                ⏮
+                            </button>
+
+                            <!-- 10 Saniyə Geri -->
+                            <button id="player-backward-btn" class="player-ctrl-btn" title="10 saniyə geri (-10s)">
+                                ↺
+                                <span class="btn-badge">-10s</span>
+                            </button>
+
+                            <!-- Play / Pause -->
+                            <button id="player-play-btn" class="player-play-btn" title="Oxut / Dayandır">
+                                <span id="player-play-icon">▶</span>
+                            </button>
+
+                            <!-- 10 Saniyə İrəli -->
+                            <button id="player-forward-btn" class="player-ctrl-btn" title="10 saniyə irəli (+10s)">
+                                ↻
+                                <span class="btn-badge">+10s</span>
+                            </button>
+
+                            <!-- Növbəti Mahnı -->
+                            <button id="player-next-btn" class="player-ctrl-btn" title="Növbəti mahnı">
+                                ⏭
+                            </button>
+
+                            <!-- Təkrarla (Loop) -->
+                            <button id="player-loop-btn" class="player-ctrl-btn" title="Mahnını təkrarla">
+                                🔁
+                            </button>
+                        </div>
+
+                        <!-- Səs Tənzimlənməsi -->
+                        <div class="player-volume-row">
+                            <button id="player-volume-btn" class="volume-icon-btn" title="Səsi bağla/aç">🔊</button>
+                            <input id="player-volume-slider" class="player-volume-slider" type="range" min="0" max="1" step="0.05" value="1">
+                        </div>
+
+                    </div>
+
+                    <!-- Sağ Tərəf: Sinxron Sözlər (Karaoke) -->
+                    <div class="lyrics-deck">
+                        <div class="lyrics-header">
+                            <div class="lyrics-title">
+                                <span>💖</span> Sinxron Mahnı Sözləri
+                            </div>
+                            <div class="lyrics-tip">
+                                Sətirə toxunub həmin saniyəyə keçin 🎶
+                            </div>
+                        </div>
+
+                        <!-- Avtomatik Sürüşən Sözlər -->
+                        <div id="player-lyrics-list" class="lyrics-scroll-container">
+                            <!-- JS tərəfindən dinamik doldurulur -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BİZİM HEKAYƏMİZ (TIMELINE) -->
+        <section class="section-container">
+            <div class="section-title-wrap">
+                <h3 class="section-title">Bizim Unudulmaz Hekayəmiz</h3>
+                <p class="section-subtitle">Talehin bizi bir araya gətirdiyi ən xüsusi tarixlər</p>
+            </div>
+
+            <div class="timeline">
+                <!-- 02.08.2026 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date-badge">02 Avqust 2026</span>
+                        <h4 class="timeline-item-title">İlk Görüş və Tanışlıq ✨</h4>
+                        <p class="timeline-item-desc">
+                            Həyatımın axarını dəyişən, mələk baxışlı bir qızla ilk dəfə qarşılaşdığım və taleyimin ən gözəl səhifəsinin açıldığı gün.
+                        </p>
+                        <div class="timeline-fun-quote">
+                            "Bəzi anlar var ki, ömür boyu yaddaşından silinməz... O gün mənim nağılım başladı."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 26.08.2026 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date-badge">26 Avqust 2026</span>
+                        <h4 class="timeline-item-title">WhatsApp-a Keçdik! 💬</h4>
+                        <p class="timeline-item-desc">
+                            Mən böyük həyəcanla ilk mesajı yazdım... Amma Nəzrin xanım mənə ilk olaraq zərifcə bir <b>görüldü atdı</b>! 🙈
+                        </p>
+                        <div class="timeline-fun-quote">
+                            "O görüldü məni dayandıra bilməzdi, çünki bilirdim ki, sən mənim taleyimsən! İndi isə hər mesajın bir ömürə bərabərdir."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gələcək Xəyallarımız -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date-badge">Sonsuzluq & Gələcək</span>
+                        <h4 class="timeline-item-title">Əl-ələ Bütün Xəyallarımıza 🕊️</h4>
+                        <p class="timeline-item-desc">
+                            Birlikdə dünyanı gəzmək, hər yeni günə bir-birimizin gözlərində oyanmaq və hər çətinliyi sevgiylə aşmaq.
+                        </p>
+                        <div class="timeline-fun-quote">
+                            "Səninlə hər şey mümkündür, hər yol gözəldir..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÜTLÜK PROFİLLƏRİ VƏ AD GÜNÜ SAYĞACLARI -->
+        <section class="section-container">
+            <div class="section-title-wrap">
+                <h3 class="section-title">İki Ürək, Tək Bir Ruh</h3>
+                <p class="section-subtitle">Bir-birini tamamlayan iki parça</p>
+            </div>
+
+            <div class="couples-grid">
+                <!-- Nəzrin Kartı -->
+                <div class="couple-profile-card">
+                    <div class="profile-avatar-wrapper">
+                        <div class="profile-avatar">👸🏻</div>
+                    </div>
+                    <h4 class="profile-name">Nəzrin Əlizadə</h4>
+                    <p class="profile-tag">Mənim Gözəl Şahzadəm 🌸</p>
+                    <div class="profile-info-list">
+                        <div>🎂 <b>Ad Günü:</b> 31.07.2008</div>
+                        <div>♌ <b>Bürclər:</b> Şir (Zərif və güclü)</div>
+                        <div>✨ <b>Xüsusiyyəti:</b> Şirindillilik, məsum gülüş</div>
+                        <div>💖 <b>Ziyanın Gözündə:</b> Dünyanın ən dəyərlisi</div>
+                    </div>
+                    <div class="birthday-badge">
+                        🎁 Növbəti Ad Gününə: <b id="nazrin-bday-countdown">Hesablanır...</b>
+                    </div>
+                </div>
+
+                <!-- Ziya Kartı -->
+                <div class="couple-profile-card">
+                    <div class="profile-avatar-wrapper">
+                        <div class="profile-avatar">🤴🏻</div>
+                    </div>
+                    <h4 class="profile-name">Ziya Niyazoğlu</h4>
+                    <p class="profile-tag">Sənin Əbədi Qoruyucun 🛡️</p>
+                    <div class="profile-info-list">
+                        <div>🎂 <b>Ad Günü:</b> 20.07.2007</div>
+                        <div>♋ <b>Bürclər:</b> Xərçəng (Dərin və sədaqətli)</div>
+                        <div>✨ <b>Xüsusiyyəti:</b> Nəzrinin təbəssümünün keşikçisi</div>
+                        <div>💖 <b>Nəzrinin Gözündə:</b> Tək və əvəzolunmaz</div>
+                    </div>
+                    <div class="birthday-badge">
+                        🎁 Növbəti Ad Gününə: <b id="ziya-bday-countdown">Hesablanır...</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İNTERAKTİV SEVGİ DÜYMƏSİ ("Səni Niyə Sevirəm?") -->
+        <section class="section-container">
+            <div class="love-reason-box">
+                <h3 class="section-title">Səni Niyə Bu Qədər Çox Sevirəm?</h3>
+                <p class="section-subtitle">Hər toxunuşda qəlbimdən qopan xüsusi bir səbəb</p>
+
+                <div class="reason-display-card">
+                    <div id="reason-text" class="reason-text">
+                        "Düyməyə toxun və səni niyə bu qədər dəlicəsinə sevdiyimi gör... 💖"
+                    </div>
+                </div>
+
+                <button id="reason-btn" class="love-reason-btn" type="button">
+                    <span>✨</span> Yeni Bir Səbəb Göstər <span>💖</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ZİYADAN NƏZRİNƏ MƏKTUB (INTERACTIVE ENVELOPE) -->
+        <section class="section-container envelope-wrapper">
+            <div class="section-title-wrap">
+                <h3 class="section-title">Ziyadan Xüsusi Məktub</h3>
+                <p class="section-subtitle">Yalnız Nəzrinin oxuması üçün yazılmış sətirlər</p>
+            </div>
+
+            <div id="envelope-trigger" class="envelope-container">
+                <div class="envelope-icon">💌</div>
+                <h4 style="font-size: 22px; color: #fff; margin-bottom: 6px;">Qırmızı Möhürlü Sevgi Zərfi</h4>
+                <div class="envelope-hint">Məktubu açmaq üçün toxun 💌</div>
+
+                <div id="letter-content" class="letter-content" onclick="event.stopPropagation();">
+                    <div class="letter-paper">
+                        <h4>Ən Gözəlim, Nəzrinim...</h4>
+                        <p>
+                            Bu sətirləri sənə olan sonsuz sevgimlə yazıram. 02 Avqust 2026-cı ildə həyatıma girdiyin andan bəri, mənim üçün dünya tamamilə başqa bir rəngə büründü.
+                        </p>
+                        <p style="margin-top: 12px;">
+                            Hətta ilk yazdığımda mənə atdığın o "görüldü" belə indi üzümdə ən şirin təbəssümü yaradır. Çünki o gündən bu günə qədər mənə yaşatdığın hər duyğu, hər kəlmə və hər baxış qəlbimin ən dərin yerinə həkk olunub.
+                        </p>
+                        <p style="margin-top: 12px;">
+                            Sən mənim bu həyatda başıma gələn ən gözəl möcüzəsən. Nə qədər ki, nəfəs alıram, sənin əlini heç vaxt buraxmayacam və hər gün səni dünənkindən daha çox sevəcəm.
+                        </p>
+                        <div class="letter-signature">
+                            Səni hər şeydən çox sevən,<br>
+                            <b>Ziya</b> ❤️
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- XATİRƏLƏR VƏ POLAROİD ÇƏRÇİVƏLƏRİ -->
+        <section class="section-container">
+            <div class="section-title-wrap">
+                <h3 class="section-title">Bizim Xatirə Lövhəmiz</h3>
+                <p class="section-subtitle">Hər kadrda ürəyimizin döyüntüsü var</p>
+            </div>
+
+            <div class="polaroids-grid">
+                <div class="polaroid-card" onclick="if(window.createHeartBurst) window.createHeartBurst(event.clientX, event.clientY, 20)">
+                    <div class="polaroid-img-placeholder">
+                        ✨
+                        <span style="font-size: 14px; margin-top: 8px; color: #b845ff; font-weight: 500;">02.08.2026</span>
+                    </div>
+                    <div class="polaroid-caption">İlk Tanışlıq Anı</div>
+                    <div class="polaroid-date">Möcüzənin başladığı gün</div>
+                </div>
+
+                <div class="polaroid-card" onclick="if(window.createHeartBurst) window.createHeartBurst(event.clientX, event.clientY, 20)">
+                    <div class="polaroid-img-placeholder">
+                        💬
+                        <span style="font-size: 14px; margin-top: 8px; color: #ff3377; font-weight: 500;">26.08.2026</span>
+                    </div>
+                    <div class="polaroid-caption">O Məşhur Görüldü 🙈</div>
+                    <div class="polaroid-date">WhatsApp-ın ən şirin anı</div>
+                </div>
+
+                <div class="polaroid-card" onclick="if(window.createHeartBurst) window.createHeartBurst(event.clientX, event.clientY, 20)">
+                    <div class="polaroid-img-placeholder">
+                        💖
+                        <span style="font-size: 14px; margin-top: 8px; color: #ffd166; font-weight: 500;">31.07 & 20.07</span>
+                    </div>
+                    <div class="polaroid-caption">Bizim Əbədiyyətimiz</div>
+                    <div class="polaroid-date">Sonsuza qədər birlikdə</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="romantic-footer">
+            <p>
+                Ziya & Nəzrin üçün sonsuz məhəbbətlə hazırlandı <span class="footer-heart">❤️</span>
+            </p>
+            <p style="font-size: 12px; margin-top: 8px; opacity: 0.7;">
+                Hər saniyəsi sevgimizlə döyünən bir nağıl... (3107 🔐)
+            </p>
+        </footer>
+
+    </div>
+
+    <!-- JS Skriptləri -->
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
